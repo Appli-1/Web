@@ -325,7 +325,7 @@ function handleCorrect(question) {
     feedback.textContent = question.successLine || "Respuesta correcta!";
     feedback.classList.add("is-success");
     feedback.classList.remove("is-error");
-    updateMessage(question.successLine || "Respiramos amor dorado.");
+    updateMessage(question.successLine || "");
     glowTitle();
 }
 
@@ -420,5 +420,5 @@ canvas.addEventListener("click", (event) => {
     const y = event.clientY - rect.top;
     flowers.push(new Flower(x, y));
     sparks.push(new Spark(x, y));
-    updateMessage("Dejaste caer otra pista.");
+    updateMessage("Me gustas mucho mi amor, me gustas mucho mi bb");
 });
