@@ -37,25 +37,25 @@ const questionList = [
         prompt: "¿Cómo te gusta llamarme?",
         answer: "betito",
         successLine: "Tus ojitos los mas lindos.",
-        petals: 1
+        petals: 5
     },
     {
         prompt: "¿Donde fuimos en nuestra primera cita?",
         answer: "cine",
         successLine: "Tus labios pequeños tan bonitos",
-        petals: 1
+        petals: 5
     },
     {
         prompt: "Como se llaman las primeras flores que te regale?",
         answer: "tulipanes",
         successLine: "Exacto, todo se vuelve mas bonito a tu lado",
-        petals: 1
+        petals: 5
     },
     {
         prompt: "Cual es mi color favorito?",
         answer: "verde",
         successLine: "tan linda desde el primer dia que te vi!",
-        petals: 1
+        petals: 5
     },
     {
         prompt: "Como me gusta decirte?",
