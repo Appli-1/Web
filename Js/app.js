@@ -29,10 +29,6 @@ const heroStartButton = document.getElementById("B1");
 const puzzleStartButton = document.getElementById("PuzzleStart");
 
 const randomLines = [
-    "Cada respuesta es un sí para toda la vida.",
-    "Con tu voz nacen estrellas nuevas.",
-    "El reino celebra cada promesa que cumples.",
-    "Tus palabras son la brújula de mis días."
 ];
 
 // Puedes editar estas preguntas y respuestas para personalizar el juego.
@@ -326,7 +322,7 @@ function handleCorrect(question) {
     scatterBlooms(petalsAward, petalsAward > 1 ? "random" : "center");
     earnedFlowers += petalsAward;
     updatePetalCounter();
-    feedback.textContent = question.successLine || "Respuesta correcta, flor añadida.";
+    feedback.textContent = question.successLine || "Respuesta correcta!";
     feedback.classList.add("is-success");
     feedback.classList.remove("is-error");
     updateMessage(question.successLine || "Respiramos amor dorado.");
@@ -337,8 +333,8 @@ function finishPuzzle() {
     puzzleFinished = true;
     answerInput.disabled = true;
     submitAnswer.disabled = true;
-    feedback.textContent += " Has completado la constelación de promesas.";
-    updateMessage("Desataste un ramo completo de flores amarillas.");
+    feedback.textContent += " ";
+    updateMessage("");
 }
 
 function processAnswer() {
@@ -357,7 +353,7 @@ function processAnswer() {
     const isCorrect = matchesAnswer(userValue, currentQuestion.answer);
 
     if (!isCorrect) {
-        feedback.textContent = "Mmm... inténtalo otra vez con el corazón.";
+        feedback.textContent = "Mmm... inténtalo otra vez";
         feedback.classList.add("is-error");
         feedback.classList.remove("is-success");
         return;
@@ -424,5 +420,5 @@ canvas.addEventListener("click", (event) => {
     const y = event.clientY - rect.top;
     flowers.push(new Flower(x, y));
     sparks.push(new Spark(x, y));
-    updateMessage("Dejaste caer otra pista en el cielo.");
+    updateMessage("Dejaste caer otra pista.");
 });
