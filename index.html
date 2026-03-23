@@ -3,48 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Regalo para la bonita &lt;3</title>
+    <title>Para la nanis</title>
     <link rel="stylesheet" href="Css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@1&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@1&family=Playfair+Display:wght@600&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="Contenedor-Binicio">
-        <button class="Button" id="BVer"> Si me quieres dale aqui </button>
-       </div>
-    
-    <div class="Contenedor-imagen">
-        <img src="tinkerbell.png" class="imagen" style="width: 100px; height: auto;">
+    <div class="aurora" aria-hidden="true"></div>
+    <div class="lantern-track" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
-    <div class="Con-Emergente">
-        <div id="resultado" class="cua">
-            <p id="res">
-                Hola, un regalo para la nanis momis.
-            </p>    
-            <button id="BotonCerrar" class="Button">Cerrar</button>
-        </div>
-    </div>
+    <main class="storybook">
+        <section class="hero card">
+            <div class="hero__copy">
+                <p class="hero__tag">Para la más hermosa</p>
+                <h1 id="Titulo">Sabes que si eres la mas hermosa</h1>
+                <p class="hero__text">
+                   Me encanta verte me gusta saber de ti.
+                </p>
+                <div class="cta">
+                    <button class="Button" id="BVer">Leer el mensaje secreto</button>
+                    <button class="Button Button--stroke" id="B1">Sí, soy la más hermosa</button>
+                </div>
+            </div>
+            <figure class="hero__art">
+                <img src="nanis.jpg" alt="" loading="lazy">
+                <figcaption>En todas las fotos sales bonitas pero esta me encanta cuando te la tome.</figcaption>
+            </figure>
+        </section>
 
-    <div class="Con-2">
-        <h1 id="Titulo"> Me debes un beso!</h1>
-        <div class="Con">
-            <button class="Button" id="B1"> Si estas bonita presiona aqui </button>
-            <button class="Button" id="B12"> Si estas super diosa increible magnífica dale aqui (ya sabes que eso vales ya dale aqui) </button>
-        </div>
-    </div>
-
-    <main class="Contenedor">
-        <canvas id="Flor" class="Flor" width="800" height="600"></canvas>
-
-        <div class="Texto">
-            <h2 id="Text">Para la mas Hermosa del mundo ❤️.</h2>
-        </div>
-
+        <section class="garden card" id="PuzzleArea">
+            <header class="garden__header">
+                <p class="garden__tag">Reglas</p>
+                <h2>Prueba de amor</h2>
+                <p>Si contestas todas bien me quieres de verdad.</p>
+            </header>
+            <div class="garden__content">
+                <div class="puzzle-shell">
+                    <div class="puzzle__intro" id="PuzzleIntro">
+                        <p>Cuando estés lista, presiona el botón.</p>
+                        <button class="Button" id="PuzzleStart">Abrir el rompecorazones</button>
+                    </div>
+                    <div class="puzzle__body" id="PuzzleBody" hidden>
+                        <div class="puzzle__progress" aria-live="polite">
+                            <span id="QuestionCounter">Pregunta 1 de 5</span>
+                            <span id="PetalCounter"></span>
+                        </div>
+                        <p class="puzzle__question" id="QuestionText">Pregunta romántica.</p>
+                        <label class="puzzle__label" for="AnswerInput">Tu respuesta</label>
+                        <div class="puzzle__input">
+                            <input type="text" id="AnswerInput" autocomplete="off" spellcheck="false" placeholder="Escribe tu promesa...">
+                            <button class="Button" id="SubmitAnswer">Sellar respuesta</button>
+                        </div>
+                        <p class="puzzle__feedback" id="Feedback" role="status"></p>
+                        <div class="puzzle__footer">
+                            <button class="Button Button--ghost" id="ResetPuzzle">Reiniciar historia</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas-shell">
+                    <canvas id="Flor" class="Flor" width="900" height="520" aria-label="Canvas con animacion de flores amarillas"></canvas>
+                    <div class="Texto" aria-live="polite">
+                        <h3 id="Text">Cada respuesta dice cuanto me quieres.</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <div class="Con-Emergente" id="LoveModal" aria-hidden="true">
+        <div id="resultado" class="cua" role="dialog" aria-modal="true" aria-labelledby="res">
+            <p id="res">
+                Te quiero mucho mi amor, me gustas mucho mi bb, eres lo mas lindo que tengo, me encanta verte me gusta saber de ti.
+            </p>
+            <button class="Button" id="CerrarModal">Guardar en el corazon</button>
+        </div>
+    </div>
 
     <script src="Js/app.js"></script>
     <script src="Js/Dis.js"></script>
